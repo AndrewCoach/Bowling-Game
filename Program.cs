@@ -1,10 +1,12 @@
 ﻿var bowling = new BowlingGame();
 int[] bowlingRuns = new int[] { 1, 4, 4, 5, 6, 4, 5, 5, 10, 0, 1, 7, 3, 6, 4, 10, 2, 8, 6 };
+var lap = 1;
 foreach (int i in bowlingRuns)
 {
-    Console.WriteLine($"[Played: {i}");
+    Console.WriteLine($"[Played: {lap}");
     bowling.Play(i);
     Console.WriteLine($"[Score:  {bowling.GetScore()}]");
+    lap++;
 }
 
 
